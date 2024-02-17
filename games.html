@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Button with Hover Effect</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            font-family: Arial, sans-serif;
+            margin-right: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+        .image-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0));
+            color: #fff;
+            padding: 8px;
+            box-sizing: border-box;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Added opacity transition */
+            opacity: 0; /* Initially set opacity to 0 */
+        }
+
+        .button-overlay div:first-child {
+            font-size: 18px;
+        }
+
+        .button-overlay div:last-child {
+            font-size: 14px;
+        }
+
+        .image-button:hover {
+            transform: scale(1.05);
+        }
+
+        .image-button:hover .button-overlay {
+            transform: translateY(0);
+            opacity: 1; /* Fade in effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://sites.google.com/view/gamecat/games/all-games/snowball-io" class="image-button">
+            <img id="buttonImage1" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Snowball.io</div>
+                <div>Strategy Games</div>
+            </div>
+        </a>
+
+        <!-- Second Button -->
+        <a href="https://sites.google.com/view/gamecat/games/all-games/retro-bowl" class="image-button">
+            <img id="buttonImage2" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Retro Bowl</div>
+                <div>Sports Games</div>
+            </div>
+        </a>
+
+        <!-- Third Button -->
+        <a href="https://sites.google.com/view/gamecat/games/all-games/cookie-clicker" class="image-button">
+            <img id="buttonImage3" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Cookie Clicker</div>
+                <div>Idle Games</div>
+            </div>
+        </a>
+
+        <!-- Fourth Button -->
+        <a href="https://sites.google.com/view/gamecat/games/all-games/stack" class="image-button" class="image-button">
+            <img id="buttonImage4" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Stack</div>
+                <div>Calming Games</div>
+            </div>
+        </a>
+
+        <!-- Fifth Button -->
+        <a href="https://sites.google.com/view/gamecat/games/all-games/idle-breakout" class="image-button" class="image-button">
+            <img id="buttonImage5" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Idle Breakout</div>
+                <div>Idle Games</div>
+            </div>
+        </a>
+
+        <!-- Sixth Button -->
+        <a href="https://sites.google.com/view/gamecat/games/all-games/paper-io" class="image-button" class="image-button">
+            <img id="buttonImage6" src="https://via.placeholder.com/300" alt="Button Image">
+            <div class="button-overlay">
+                <div>Paper.io</div>
+                <div>Calming Games</div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        // Function to change the image source
+        function changeImage(imageId, newImageUrl) {
+            document.getElementById(imageId).src = newImageUrl;
+        }
+
+        // Example of changing the image URLs
+        changeImage("buttonImage1", "https://m.media-amazon.com/images/I/41EtwVZlegL.png");
+        changeImage("buttonImage2", "https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ");
+        changeImage("buttonImage3", "https://play-lh.googleusercontent.com/Z1MOuuiD05ZN5LkVmMEvKF0mqAc-FknaQ2j8s4dZiO-LSPQX4EEA3RVJdlQEtxe96ok");
+        changeImage("buttonImage4", "https://play-lh.googleusercontent.com/WRlGQXa9Pav7YZPW-P5X8PAga0lF2T1BAzmasxB9qV_1_om5DgmMbxOFo2SK8ZN5K5k");
+        changeImage("buttonImage5", "https://play-lh.googleusercontent.com/e5jzYTn7Mjh9Ghn-DFpVedkOlRfSOyCS2AFgXdTrADIuuUbjx6vP6r_YOM2j5m7uLQ");
+        changeImage("buttonImage6", "https://play-lh.googleusercontent.com/KxcjUrs8S75iOPnKBR2b-s7eGtqbREwLgzttVxaM9Znl5ZxsDCl6qEZHny4rBkMeYA=w240-h480-rw");
+    </script>
+</body>
+</html>
